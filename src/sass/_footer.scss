@@ -1,0 +1,141 @@
+.footer {
+  background: var(--black-fixed);
+  color: var(--white-fixed);
+  .footer-container {
+    grid-template-columns: 1fr;
+    .mensagem-contato {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+      padding-bottom: 70px;
+      border-bottom: 2px solid var(--color-grey-10);
+      h4 {
+        color: var(--color-grey-8);
+        font-size: 1.25rem;
+      }
+      h1 {
+        margin-top: 20px;
+        font-family: "Source Serif Pro", serif;
+        font-size: 4rem;
+        a {
+          color: var(--white-fixed);
+        }
+        a:hover {
+          transition: 0.4s;
+          color: var(--color-brand-1);
+        }
+      }
+    }
+
+    .informacoes-contato {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+      h3 {
+        font-size: 1.25rem;
+        color: var(--color-grey-2);
+      }
+
+      .contato-texto {
+        font-size: 1rem;
+        line-height: 1.4;
+        max-width: 45ch;
+        color: var(--color-grey-6);
+      }
+
+      .contato-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          font-size: 1rem;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          a {
+            color: var(--color-grey-2);
+          }
+          a:hover {
+            transition: 0.4s;
+            color: var(--color-brand-1);
+          }
+        }
+      }
+
+      .contato-rodape {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        div {
+          p {
+            font-size: 0.875rem;
+            color: var(--color-grey-4);
+          }
+        }
+      }
+
+      .btn-home {
+        height: 30px;
+        width: 30px;
+        padding: 8px;
+        background: var(--color-gradient);
+        border-radius: 50px;
+        position: absolute;
+        bottom: 120px;
+        right: 0;
+        font-size: 24px;
+        color: var(--white-fixed);
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .mensagem-contato {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    @media (max-width: 400px) {
+      .mensagem-contato {
+        h4 {
+          font-size: 0.875rem;
+        }
+        h1 {
+          font-size: 1.4rem;
+        }
+      }
+      .informacoes-contato {
+        h3 {
+          font-size: 1rem;
+        }
+        .contato-texto {
+          font-size: 0.875rem;
+        }
+        .contato-lista {
+          li {
+            a {
+              font-size: 0.75rem;
+            }
+          }
+        }
+        .contato-rodape {
+          div {
+            p {
+              font-size: 0.75rem;
+            }
+          }
+        }
+        .btn-home {
+          width: 15px;
+          height: 15px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

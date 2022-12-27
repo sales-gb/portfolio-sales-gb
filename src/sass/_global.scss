@@ -3,7 +3,6 @@
 body {
   font-family: "Fira Sans", sans-serif;
   color: var(--color-grey-13);
-  margin-bottom: 1000px;
 }
 
 img {
@@ -31,6 +30,9 @@ img {
     font-size: 3rem;
     text-transform: capitalize;
     max-width: initial;
+  }
+  @media (max-width: 800px) {
+    font-size: 2rem;
   }
 }
 
