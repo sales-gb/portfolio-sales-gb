@@ -11,12 +11,37 @@ img {
   display: block;
 }
 
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6.25rem;
+}
+
+.subtitulo {
+  font-family: "Source Serif Pro", serif;
+  font-size: 9rem;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 5ch;
+  @media (max-width: 800px) {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial;
+  }
+}
+
 :root {
   --color-brand-1: #ff8a00;
   --color-brand-2: #ffa53b;
   --color-gradient: linear-gradient(#ffaf54, #e37900);
 
   --white-fixed: #fff;
+  --black-fixed: #000;
+
   --color-grey-1: #f5f5f5;
   --color-grey-2: #f0f0f0;
   --color-grey-3: #e0e0e0;
@@ -30,12 +55,4 @@ img {
   --color-grey-11: #3d3d3d;
   --color-grey-12: #292929;
   --color-grey-13: #141414;
-}
-
-.subtitulo {
-  font-size: 9rem;
-  line-height: 1;
-  text-transform: uppercase;
-  word-break: break-all;
-  max-width: 4ch;
 }

@@ -1,20 +1,13 @@
 .experiencia {
-  max-width: 1200px;
-  padding: 40px 20px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 100px;
-
   .subtitulo {
     color: var(--color-grey-3);
   }
+
   .experiencia-texto {
     font-size: 1.5rem;
     line-height: 1.33;
-    margin-bottom: 60px;
     max-width: 50ch;
-    height: 170px;
+    margin-bottom: 3.75rem;
     color: var(--color-grey-10);
     strong {
       color: var(--color-brand-1);
@@ -24,85 +17,105 @@
   .projetos {
     display: flex;
     flex-direction: column;
-    position: relative;
     gap: 20px;
-    width: 100%;
-    height: 36.25rem;
-    // overflow-y: scroll;
-    top: -312px;
-    .projeto-card {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      background: var(--color-grey-2);
-      gap: 20px;
-      border-radius: 5px;
-      .projeto-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .projeto-name {
-          display: flex;
-          position: relative;
-          h3 {
-            margin-right: 25px;
-          }
-          h3::before {
-            content: "";
-            display: block;
-            width: 8px;
-            height: 4px;
-            background: var(--color-gradient);
-            position: absolute;
-            left: 100px;
-            top: 10px;
-          }
-          span {
-            position: relative;
-            top: 2px;
-          }
-        }
+    .projeto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.25rem;
+      background: var(--color-grey-1);
+      border-radius: 4px;
+      position: relative;
+      gap: 10px 20px;
+
+      .projeto-ano {
+        position: absolute;
+        top: 24px;
+        left: -100px;
+        text-align: right;
+        color: var(--color-grey-12);
+        font-weight: 600;
+        font-size: 0.875rem;
+        width: 80px;
       }
+
+      .projeto-titulo {
+        font-size: 1.125rem;
+        line-height: 1.1;
+        font-weight: bold;
+      }
+
       .projeto-desc {
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: var(--color-grey-10);
+      }
+
+      .projeto-skills {
         display: flex;
-        justify-content: space-between;
-        align-content: center;
-        .desc {
-          width: 65ch;
-        }
-        .projeto-skills {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          align-content: center;
-          justify-content: flex-end;
-          li {
-            padding: 5px 10px;
-            background-color: var(--white-fixed);
-          }
+        flex-wrap: wrap;
+        gap: 10px;
+        align-content: flex-start;
+        width: 90%;
+        .skill {
+          font-size: 0.875rem;
+          line-height: 1.4;
+          border-radius: 4px;
+          background: var(--white-fixed);
+          padding: 0.3125rem 0.625rem;
         }
       }
-      .projeto-links {
+
+      .projeto-deploy {
         display: flex;
-        gap: 15px;
-        div {
-          display: flex;
-          gap: 10px;
+        gap: 20px;
+        .deploy {
           a {
-            color: var(--color-grey-13);
+            display: flex;
+            gap: 5px;
+            font-size: 0.9375rem;
+            color: var(--color-grey-12);
           }
         }
       }
     }
+    .projeto::before {
+      content: "";
+      display: block;
+      height: 20px;
+      width: 4px;
+      background: var(--color-gradient);
+      position: absolute;
+      top: 20px;
+      left: -3px;
+    }
   }
-  .projeto-card::before {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 20px;
-    background: var(--color-gradient);
-    position: absolute;
-    left: -2px;
-    top: 22px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    .subtitulo {
+      color: var(--color-grey-13);
+    }
+    .experiencia-texto {
+      font-size: 1.25rem;
+    }
+    .projetos {
+      .projeto {
+        .projeto-ano {
+          position: initial;
+          order: 1;
+          width: initial;
+          text-align: left;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .projetos {
+      .projeto {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
   }
 }
