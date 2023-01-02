@@ -78,6 +78,10 @@
             font-size: 0.9375rem;
             color: var(--color-grey-12);
           }
+          a:hover {
+            transition: 0.4s;
+            color: var(--color-brand-1);
+          }
         }
       }
     }
